@@ -12,7 +12,7 @@ class EmailAddressParser
         removeDupes << i
       end
     }
-
+    removeDupes
   end
 
 end
