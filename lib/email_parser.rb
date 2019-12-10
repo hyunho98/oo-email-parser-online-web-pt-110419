@@ -4,8 +4,13 @@
 # or whitespace (' ').
 class EmailAddressParser
 
-  def parse(emails)
-    parse = emails.split(/,\s|[,\s]/)
+
+  def initialize(emails)
+    @emails = emails
+  end
+
+  def parse
+    parse = @emails.split(/,\s|[,\s]/)
     removeDupes = []
     parse.each{|i|
       if removeDupes.include?(i) == false
